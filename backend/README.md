@@ -13,3 +13,10 @@ Este es el backend para el sistema de gestión educativa **UPV Classroom**, desa
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -r requirements.txt
+
+
+## Ejecutar proyecto
+**ejecutar backend** 
+uvicorn app.main:app --reload
+**ejecutar frontend**
+npm start
