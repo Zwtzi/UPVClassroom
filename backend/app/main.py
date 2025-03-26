@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from db.database import engine, Base
+from app.db.database import engine, Base
 from app.api.routes import users, classes, tasks, auth
 
 Base.metadata.create_all(bind=engine)
