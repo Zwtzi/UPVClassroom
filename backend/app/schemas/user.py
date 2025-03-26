@@ -16,6 +16,7 @@ class UserUpdate(BaseModel):
 class UserResponse(UserBase):
     id: int
     is_active: bool
+    role: str  # Se agregó para diferenciar profesores de alumnos
 
     class Config:
         from_attributes = True

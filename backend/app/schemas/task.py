@@ -6,14 +6,14 @@ class TaskBase(BaseModel):
     title: str
     instructions: str
     due_date: datetime
-    topic_id: int
+    class_id: int  # Se corrigió `topic_id` a `class_id`
 
 class TaskCreate(TaskBase):
     pass
 
 class TaskResponse(TaskBase):
     id: int
-    class_id: int
 
     class Config:
         from_attributes = True
+        json_encoders = {datetime: lambda v: v.isoformat()}  # Formato ISO 8601

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
 
 class ClassBase(BaseModel):
     name: str
@@ -13,8 +13,7 @@ class ClassCreate(ClassBase):
 
 class ClassResponse(ClassBase):
     id: int
-    students: List[int] = []
-    teacher_id: int
+    teacher_id: int  # Se mantiene porque sí está en `models.py`
 
     class Config:
         from_attributes = True
